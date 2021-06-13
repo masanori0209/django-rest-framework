@@ -41,7 +41,7 @@ def _check_attr_name(func, name):
         'is otherwise set to `{name}`.').format(func=func, name=name)
     return func
 
-
+# TODO: ここのEmptyの原因みて見る -> https://github.com/encode/django-rest-framework/issues/7953
 class ViewSetMixin:
     """
     This is the magic.
