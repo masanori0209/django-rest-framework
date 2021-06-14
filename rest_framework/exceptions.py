@@ -38,6 +38,9 @@ def _get_error_details(data, default_code=None):
 
     text = force_str(data)
     code = getattr(data, 'code', default_code)
+    # ここを型によって変換する: https://github.com/encode/django-rest-framework/issues/7532
+    if type(data) == 'Bool':
+        text = True
     return ErrorDetail(text, code)
 
 
